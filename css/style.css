@@ -1,0 +1,285 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content: center;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    background-color: 
+    #e6f0fa;
+}
+
+section {
+    min-height: 40vh;
+    padding: 20px 20px;
+    grid-column-start: 2;
+}
+
+#header {
+    grid-column: 1 / -1;
+    background-color: #1e2939;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0px;
+}
+
+.header-titel h1 {
+    color: white;
+    font-size: 4rem;
+    margin-left: -50px;
+    margin-right: 50px;;
+    font-weight: 400;
+}
+
+.header-titel h1:nth-child(2) {
+    display: none;
+}
+
+#header img {
+    align-self: flex-end;
+    margin-right: 120px;
+}
+
+.links {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+    gap: 30px;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero > * {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#hero img {
+    height: 180px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+#hero p {
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.my-btn {
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    border-width: 1px;
+    background-color: white;
+    border-color: #1f2937;
+    border-radius: 4px;
+    box-shadow: 0 2px 1px 0 #FFFFFF
+    inset, 0 1px 1px 0;
+    transition: all 0.2s;
+    font-size: large;
+}
+
+.my-btn:hover {
+    top: 1px;
+    background-color: #fefefe;
+    box-shadow: 0 1px 1px 0 inset;
+}
+
+#skills, #techstack, #footer{
+    grid-column: 1 / -1;
+    background-color: #1e2939;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+h2 {
+    color: white;
+    font-size: 3rem;
+}
+
+#skill-card {
+    background-color: #FFFFFF;
+    padding: 20px 10px;
+    border-radius: 10px;
+    width: 60%;
+    margin-bottom: 50px;
+}
+
+.skill-titel {
+    display: flex;
+    gap: 5px;
+}
+
+.skill-titel > p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.skill-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 50px;
+}
+
+.skill {
+    text-align: right;
+    color: white;
+    border-radius: 50px;
+    padding: 3px;
+    font-size: smaller;
+    margin-bottom: 20px;
+}
+
+.webdev {width: 20%; background-color: #1e2939;}
+.project-management {width: 80%; background-color: #1e2939;}
+.re {width: 40%; background-color: #1e2939;}
+.pm {width: 90%; background-color: #1e2939;}
+.programming {width: 30%; background-color: #1e2939;}
+
+.tech-container {
+    display: flex;
+    gap: 20px;
+    width: 60%;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.tech {
+    display: flex;
+    gap: 10px;
+    border: 2.5px solid white;
+    border-radius: 500px;
+    padding: 8px;
+    background-color: #09122C;
+}
+
+.tech p {
+    margin: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+#portfolio, #contact {
+    background-color:#e6f0fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+#portfolio h2, #contact h2 {
+    color: #000;
+}
+
+.portfolio-card {
+    display: grid;
+    grid-template-columns: repeat(3, 140px);
+    grid-template-rows: 1fr 2fr auto;
+    background-image: linear-gradient(to bottom, #1f2937, transparent);
+    opacity: 0.8;
+    color: white;
+    border-radius: 10px;
+}
+
+h3 {margin: 0px;}
+
+.git-logo {
+    text-align: end;
+    margin: 15px;
+}
+
+.portfolio-titel {
+    grid-area: 1 / 1 / 1 / 3;
+    margin: 15px;
+    font-size: 1.6rem;
+}
+
+.description {
+    grid-area: 2 / 1 / 2 / -1;
+    margin: 15px;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.tech-port {
+    gap: 10px;
+    border: 2px solid white;
+    border-radius: 500px;
+    padding: 6px;
+    justify-self: center;
+    margin: 5px 15px;
+} 
+
+.tech-port p {
+    margin: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+#contact p {
+    margin: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#con-subtitel {
+    font-size: 1.6rem !important;
+}
+
+#footer {
+    color: white;
+    min-height: 10vh;
+}
+
+/* Large Devices */
+@media (max-width: 992px) {
+
+    .portfolio-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* Small Devices */
+@media (max-width: 576px) {
+    #header img {
+        margin-right: 90px;
+    }
+    .header-titel h1:nth-child(1) {
+        display: none;
+    }
+    .header-titel h1:nth-child(2) {
+        display: block;
+        border: 1px solid white;
+        padding: 5px 10px;
+        font-size: 2rem;
+        margin-top: 150px;
+        margin-right: 20px;
+    }
+}
+
+
+
+
+
+
+
