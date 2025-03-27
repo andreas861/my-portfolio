@@ -58,6 +58,7 @@ section {
     margin-bottom: 15px;
     margin-top: 15px;
     text-align: center;
+    max-width: 60%;
 }
 
 #hero img {
@@ -265,20 +266,15 @@ h3 {margin: 0px;}
 
 /* Small Devices */
 @media (max-width: 576px) {
-    .links {
-        margin-left: 30px;
+    html {
+        font-size: 90%;
+    }
+    #header > img {
+        height: 300px;
+        margin-right: 0px;
     }
     #header {
         justify-content: space-around;
-    }
-    #header img {
-        margin-right: 90px;
-    }
-    #hero p {
-        font-size: 1.2rem;
-        font-style: italic;
-        padding-left: 50px;
-        padding-right: 50px;
     }
     .header-titel h1:nth-child(1) {
         display: none;
@@ -288,8 +284,13 @@ h3 {margin: 0px;}
         border: 1px solid white;
         padding: 5px 10px;
         font-size: 1.5rem;
-        margin-top: 150px;
+        margin-top: 50px;
         margin-right: 20px;
+    }
+    .portfolio-card {
+        display: grid;
+        grid-template-columns: repeat(3, 110px);
+        grid-template-rows: 1fr 2fr auto;
     }
 }
 
